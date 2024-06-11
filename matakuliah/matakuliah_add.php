@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['Submit'])) {
-    $nim = $_POST['kode'];
+    $kode = $_POST['kode'];
     $nama = $_POST['nama'];
-    $alamat = $_POST['sks'];
-    $jk = $_POST['semester'];
-    $result = mysqli_query($con, "INSERT INTO mahasiswa(kode,nama,sks,semester)
+    $sks = $_POST['sks'];
+    $semester = $_POST['semester'];
+    $result = mysqli_query($con, "INSERT INTO matakuliah(kode,nama,sks,semester)
 VALUES('$kode','$nama','$sks','$semester')");
     header("Location:?page=matakuliah-show");
 }
@@ -22,8 +22,8 @@ VALUES('$kode','$nama','$sks','$semester')");
                         <input type="text" class="form-control" name="kode" placeholder="Masukan KODE..." required>
                     </div>
                     <div class="form-group">
-                        <label for="nama" class="ontrol-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="nama" placeholder="Masukan Nama Lengkap..." required>
+                        <label for="nama" class="ontrol-label">Mata Kuliah</label>
+                        <input type="text" class="form-control" name="nama" placeholder="Masukan Mata Kuliah..." required>
                     </div>
                     <div class="form-group">
                         <label for="sks" class="control-label">SKS</label>

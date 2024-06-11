@@ -79,12 +79,12 @@
                     echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>';
                 } else {
                     $link_prev = ($page > 1) ? $page - 1 : 1;
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=1">First</a></li>';
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $link_prev . '" arialabel="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=1">First</a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $link_prev . '" arialabel="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
                 }
                 for ($i = $start_number; $i <= $end_number; $i++) {
                     $link_active = ($page == $i) ? ' active' : '';
-                    echo '<li class="page-item ' . $link_active . '"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $i . '">' . $i .
+                    echo '<li class="page-item ' . $link_active . '"><a class="page-link" href="?page=matakuliah-show&halaman=' . $i . '">' . $i .
                         '</a></li>';
                 }
                 if ($page == $jumlah_page) {
@@ -92,8 +92,8 @@
                     echo '<li class="page-item disabled"><a class="page-link" href="#">Last</a></li>';
                 } else {
                     $link_next = ($page < $jumlah_page) ? $page + 1 : $jumlah_page;
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $link_next . '" arialabel="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $jumlah_page .
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $link_next . '" arialabel="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $jumlah_page .
                         '">Last</a></li>';
                 }
                 ?>
